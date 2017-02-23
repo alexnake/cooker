@@ -1,0 +1,21 @@
+body {
+  text-align: -webkit-center;
+}
+
+.mainImage {
+    padding: 0pt;
+    box-shadow: 10px 10px 40px #ccc; 
+    -moz-box-shadow: 10px 10px 40px #ccc; 
+    -webkit-box-shadow: 10px 10px 40px #ccc; 
+    -khtml-box-shadow: 10px 10px 40px #ccc;
+}
+
+.last-recepies {
+    height: 40em;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
