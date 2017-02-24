@@ -8,7 +8,9 @@
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+@import "main/contact";
 @import "main/body";
 @import "main/foundation";
 @import "main/navigationBar";
 @import "main/app";
+@import "main/pikaday";
