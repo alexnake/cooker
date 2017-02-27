@@ -15,72 +15,31 @@
         <div class="twelve columns">
             <div class="row">
                 <div class="eight columns divMainImage">
-                    <img class="mainImage" src="http://lorempixel.com/600/400/food" alt="Mountain View">
-                    <h3>Nueva receta.</h3>
+                    <img class="mainImage" src="{{ $indexRecipes[0]->photo }}">
+                    <h3>{{ $indexRecipes[0]->title }}</h3>
                     <p>
-                        Descripción nueva receta.
+                        {{ $indexRecipes[0]->summary }}
+                    </p>     
+                    <p>
+                        {{ $indexRecipes[0]->description }}
                     </p>                  
                 </div>
         
                 <div class="four columns">
                     <h4>Últimas recetas</h4>
                     <div class="last-recepies">
-                        <div class="recepie-sidebar">
-                            <div class="seven columns">
-                                <img class="" src="http://lorempixel.com/600/400/food" alt="Mountain View">
-                            </div>
-                            <div class="five columns">
-                                <h4>Titulo</h4><p>Ejemplo de receta</p>   
-                            </div>
-                        </div> 
-                        <div class="recepie-sidebar">
-                            <div class="seven columns">
-                                <img class="" src="http://lorempixel.com/600/400/food" alt="Mountain View">
-                            </div>
-                            <div class="five columns">
-                                <h4>Titulo</h4><p>Ejemplo de receta</p>   
-                            </div>
-                        </div> 
-                        <div class="recepie-sidebar">
-                            <div class="seven columns">
-                                <img class="" src="http://lorempixel.com/600/400/food" alt="Mountain View">
-                            </div>
-                            <div class="five columns">
-                                <h4>Titulo</h4><p>Ejemplo de receta</p>   
-                            </div>
-                        </div> 
-                        <div class="recepie-sidebar">
-                            <div class="seven columns">
-                                <img class="" src="http://lorempixel.com/600/400/food" alt="Mountain View">
-                            </div>
-                            <div class="five columns">
-                                <h4>Titulo</h4><p>Ejemplo de receta</p>   
-                            </div>
-                        </div> 
-                        <div class="recepie-sidebar">
-                            <div class="seven columns">
-                                <img class="" src="http://lorempixel.com/600/400/food" alt="Mountain View">
-                            </div>
-                            <div class="five columns">
-                                <h4>Titulo</h4><p>Ejemplo de receta</p>   
-                            </div>
-                        </div> 
-                        <div class="recepie-sidebar">
-                            <div class="seven columns">
-                                <img class="" src="http://lorempixel.com/600/400/food" alt="Mountain View">
-                            </div>
-                            <div class="five columns">
-                                <h4>Titulo</h4><p>Ejemplo de receta</p>   
-                            </div>
-                        </div> 
-                        <div class="recepie-sidebar">
-                            <div class="seven columns">
-                                <img class="" src="http://lorempixel.com/600/400/food" alt="Mountain View">
-                            </div>
-                            <div class="five columns">
-                                <h4>Titulo</h4><p>Ejemplo de receta</p>   
-                            </div>
-                        </div> 
+                    
+                        @for ($i=1; $i < count($indexRecipes) ;$i++)
+                    
+                            <div class="recepie-sidebar">
+                                <div class="seven columns">
+                                    <img class="" src="{{ $indexRecipes[$i]->photo }}">
+                                </div>
+                                <div class="five columns lineBreak">
+                                    <h4>{{ $indexRecipes[$i]->tittle }}</h4><p>{{ $indexRecipes[$i]->summary }}</p>   
+                                </div>
+                            </div> 
+                        @endfor
                     </div>
                 </div>
             </div>

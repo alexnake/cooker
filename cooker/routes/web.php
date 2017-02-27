@@ -16,18 +16,20 @@
 | Index route
 |--------------------------------------------------------------------------
  */
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [
+    'uses' => 'IndexController@index',
+    'as' => 'index.index'
+]);
 
 /*
 |--------------------------------------------------------------------------
 | Menu route
 |--------------------------------------------------------------------------
  */
-Route::get('/menu', function () {
-    return view('menu');
-});
+Route::get('/menu', [
+    'uses' => 'MenuController@index',
+    'as' => 'menu.index'
+]);
 
 /*
 |--------------------------------------------------------------------------
@@ -46,4 +48,33 @@ Route::get('/reserve', function () {
 Route::post('/makeReserve', [
     'uses' => 'ReserveController@makeReserve',
     'as' => 'reserve.make_reserve'
+]);
+
+/*
+|--------------------------------------------------------------------------
+| Create recipe View
+|--------------------------------------------------------------------------
+ */
+Route::get('/makeRecipe', function () {
+    return view('newRecipe');
+});
+
+/*
+|--------------------------------------------------------------------------
+| Make new recipe
+|--------------------------------------------------------------------------
+ */
+Route::post('/create', [
+    'uses' => 'RecipesController@create',
+    'as' => 'recipes.create'
+]);
+
+/*
+|--------------------------------------------------------------------------
+| Take all recipes
+|--------------------------------------------------------------------------
+ */
+Route::get('/getRecipes', [
+    'uses' => 'RecipesController@getAllOrderByDateDesc',
+    'as' => 'recipes.getAllOrderByDateDesc'
 ]);

@@ -5989,6 +5989,9 @@ body {
 .leftText {
   text-align: left; }
 
+.lineBreak {
+  word-wrap: break-word; }
+
 /* Requires: normalize.css -box-sizing.htc */
 /* Global Reset & Standards ---------------------- */
 * {
