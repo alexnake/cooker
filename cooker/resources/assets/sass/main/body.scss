@@ -56,3 +56,23 @@ body {
 .leftText {
     text-align: left;
 }
+
+.lineBreak {
+    word-wrap:break-word;
+}
+
+.aboutMainImage {
+    margin-left: 1em;
+}
+
+.aboutTextBox {
+    border: solid 2pt;
+    border-radius: 4pt;
+    padding: 1em;
+    margin: 1em 0em 1em 1.4em;
+    height: 26em;
+}
+
+.aboutImage {
+    padding-top: 0.6em !important;
+}

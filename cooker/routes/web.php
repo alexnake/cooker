@@ -16,27 +16,30 @@
 | Index route
 |--------------------------------------------------------------------------
  */
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [
+    'uses' => 'IndexController@index',
+    'as' => 'index.index'
+]);
 
 /*
 |--------------------------------------------------------------------------
 | Menu route
 |--------------------------------------------------------------------------
  */
-Route::get('/menu', function () {
-    return view('menu');
-});
+Route::get('/menu', [
+    'uses' => 'MenuController@index',
+    'as' => 'menu.index'
+]);
 
 /*
 |--------------------------------------------------------------------------
 | Reserve route
 |--------------------------------------------------------------------------
  */
-Route::get('/reserve', function () {
-    return view('reserve');
-});
+Route::get('/reserve', [
+    'uses' => 'ReserveController@index',
+    'as' => 'reserve.reserve'
+]);
 
 /*
 |--------------------------------------------------------------------------
@@ -46,4 +49,43 @@ Route::get('/reserve', function () {
 Route::post('/makeReserve', [
     'uses' => 'ReserveController@makeReserve',
     'as' => 'reserve.make_reserve'
+]);
+
+/*
+|--------------------------------------------------------------------------
+| Create recipe View
+|--------------------------------------------------------------------------
+ */
+Route::get('/makeRecipe', function () {
+    return view('newRecipe');
+});
+
+/*
+|--------------------------------------------------------------------------
+| Make new recipe
+|--------------------------------------------------------------------------
+ */
+Route::post('/create', [
+    'uses' => 'RecipesController@create',
+    'as' => 'recipes.create'
+]);
+
+/*
+|--------------------------------------------------------------------------
+| Take all recipes
+|--------------------------------------------------------------------------
+ */
+Route::get('/getRecipes', [
+    'uses' => 'RecipesController@getAllOrderByDateDesc',
+    'as' => 'recipes.getAllOrderByDateDesc'
+]);
+
+/*
+|--------------------------------------------------------------------------
+| About route
+|--------------------------------------------------------------------------
+ */
+Route::get('/about', [
+    'uses' => 'AboutController@index',
+    'as' => 'about.index'
 ]);

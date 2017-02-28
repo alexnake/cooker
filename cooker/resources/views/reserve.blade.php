@@ -9,6 +9,7 @@
         
         <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
         <link rel="stylesheet" href="{{ URL::asset('css/font-awesome/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('css/sweetalert.css') }}">
     @stop
     
     @section('content')
@@ -23,7 +24,7 @@
                             <div class="form-group">
                                 <p>Nombre<span>*</span></p>
                                 <span class="icon-case"><i class="fa fa-male"></i></span>
-                                <input type="text" class="contactInput" name="nom" id="nom" data-rule="required" data-msg="Debe insertar un nombre." required/>
+                                <input type="text" class="contactInput" name="name" id="nom" data-rule="required" data-msg="Debe insertar un nombre." required/>
                                 <div class="validation"></div>
                             </div>
 
@@ -44,7 +45,7 @@
                             <div class="form-group">
                                 <p>Fecha <span>*</span></p>    
                                 <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
-                                <input class="contactInput"  type="text" id="datepicker" required>
+                                <input class="contactInput"  type="text" name="date" id="datepicker" required>
                                 <div class="validation"></div>
                             </div> 
                         </div>
@@ -70,16 +71,26 @@
     @section('footer')
         <script type="text/javascript" src="{{ URL::asset('js/jquery-3.1.1.min.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
-        <script type="text/javascript" src="{{ URL::asset('js/moment.js') }}"></script>
-        <script type="text/javascript" src="{{ URL::asset('js/pikaday.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/sweetalert.min.js') }}"></script>
         <script>
             var picker = new Pikaday({
                 field: document.getElementById('datepicker'),
                 firstDay: 1,
                 format: 'DD/MM/YYYY',
                 disableDayFn: function(theDate) {
-                    return (theDate.getDay() != 6 && theDate.getDay() != 0 && theDate.getDay() != 5)
+                    var reserves = "{{ isset($reserves) ? $reserves : [] }}";
+                    return (theDate.getDay() != 6 && theDate.getDay() != 0 && theDate.getDay() != 5 && reserves.indexOf(theDate.toISOString().slice(0,10)));
                 }
             });
+            
+            var reserveDone = "{{isset($reserveDone) && $reserveDone == '1'}}";
+            if(reserveDone == "true"){
+                swal({
+                  title: "Reserva realizada",
+                  text: "La reserva se ha realizado correctamente.",
+                  type: "success",
+                  confirmButtonText: "Aceptar"
+                });
+            }
         </script>
     @stop  

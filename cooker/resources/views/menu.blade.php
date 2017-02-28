@@ -21,56 +21,18 @@
                     </div>
                 </div>
             </div>
-        
-            <div class="menu-recepie">
-                <div class="row">
-                    <div class="five columns leftText">
-                        <img class="recepieImage" src="http://lorempixel.com/600/400/food">
-                    </div>
-                    <div class="seven columns leftText">
-                        <h4>Titulo</h4><p>Ejemplo de receta</p>   
-                    </div>
-                </div>
-            </div>
-            <div class="menu-recepie">
-                <div class="row">
-                    <div class="five columns leftText">
-                        <img class="recepieImage" src="http://lorempixel.com/600/400/food">
-                    </div>
-                    <div class="seven columns leftText">
-                        <h4>Titulo</h4><p>Ejemplo de receta</p>   
+            @foreach ($clasicsRecipes as $recipe)
+                <div class="menu-recepie">
+                    <div class="row">
+                        <div class="five columns leftText">
+                            <img class="recepieImage" src="{{ $recipe->photo }}">
+                        </div>
+                        <div class="seven columns leftText">
+                            <h4>{{ $recipe->title }}</h4><p>{{ $recipe->summary }}</p>   
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="menu-desc">
-                <div class="row">
-                    <div class="twelve columns">
-                        <h3>LO NUEVO</h3>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="menu-recepie">
-                <div class="row">
-                    <div class="five columns leftText">
-                        <img class="recepieImage" src="http://lorempixel.com/600/400/food">
-                    </div>
-                    <div class="seven columns leftText">
-                        <h4>Titulo</h4><p>Ejemplo de receta</p>   
-                    </div>
-                </div>
-            </div>
-            <div class="menu-recepie">
-                <div class="row">
-                    <div class="five columns leftText">
-                        <img class="recepieImage" src="http://lorempixel.com/600/400/food">
-                    </div>
-                    <div class="seven columns leftText">
-                        <h4>Titulo</h4><p>Ejemplo de receta</p>   
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
     @stop
