@@ -17,47 +17,47 @@
             <form method="post" action="{{ route('reserve.make_reserve') }}">
                 <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
                 <div class="contentform">
-                    <div id="sendmessage"> Your message has been sent successfully. Thank you. </div>
 
-                    <div class="leftcontact">
-                        <div class="form-group">
-                            <p>Nombre<span>*</span></p>
-                            <span class="icon-case"><i class="fa fa-male"></i></span>
-                            <input type="text" class="contactInput" name="nom" id="nom" data-rule="required" data-msg="Debe insertar un nombre."/>
-                            <div class="validation"></div>
+                    <div class="row">
+                        <div class="six columns">
+                            <div class="form-group">
+                                <p>Nombre<span>*</span></p>
+                                <span class="icon-case"><i class="fa fa-male"></i></span>
+                                <input type="text" class="contactInput" name="nom" id="nom" data-rule="required" data-msg="Debe insertar un nombre." required/>
+                                <div class="validation"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <p>Teléfono <span>*</span></p>  
+                                <span class="icon-case"><i class="fa fa-phone"></i></span>
+                                <input class="contactInput" type="text" name="phone" id="phone" data-rule="maxlen:10" data-msg="Verifique el telefono." required/>
+                                <div class="validation"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <p>E-mail <span>*</span></p>    
+                                <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+                                <input class="contactInput" type="email" name="email" id="email" data-rule="email" data-msg="El campo E-mail es obligatorio." required/>
+                                <div class="validation"></div>
+                            </div> 
+
+                            <div class="form-group">
+                                <p>Fecha <span>*</span></p>    
+                                <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+                                <input class="contactInput"  type="text" id="datepicker" required>
+                                <div class="validation"></div>
+                            </div> 
                         </div>
-
-                        <div class="form-group">
-                            <p>Teléfono <span>*</span></p>  
-                            <span class="icon-case"><i class="fa fa-phone"></i></span>
-                            <input class="contactInput" type="text" name="phone" id="phone" data-rule="maxlen:10" data-msg="Verifique el telefono."/>
-                            <div class="validation"></div>
-                        </div>
-
-                        <div class="form-group">
-                            <p>E-mail <span>*</span></p>    
-                            <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
-                            <input class="contactInput" type="email" name="email" id="email" data-rule="email" data-msg="El campo E-mail es obligatorio."/>
-                            <div class="validation"></div>
-                        </div> 
-
-                        <div class="form-group">
-                            <p>Fecha <span>*</span></p>    
-                            <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
-                            <input class="contactInput"  type="text" id="datepicker">
-                            <div class="validation"></div>
-                        </div> 
-                    </div>
-
-                    <div class="rightcontact">  
                     
-                        <div class="form-group">
-                        <p>Mensaje <span>*</span></p>
-                        <span class="icon-case"><i class="fa fa-comments-o"></i></span>
-                            <textarea name="message" rows="14" data-rule="required" data-msg="El campo mensaje es obligatorio"></textarea>
-                            <div class="validation"></div>
-                        </div>  
-                </div>
+                        <div class="six columns">
+                            <div class="form-group">
+                            <p>Mensaje</p>
+                            <span class="icon-case"><i class="fa fa-comments-o"></i></span>
+                                <textarea name="message" rows="14" data-rule="required" data-msg="El campo mensaje es obligatorio"></textarea>
+                                <div class="validation"></div>
+                            </div> 
+                        </div>
+                    </div>
                 </div>
                 
                 <button type="submit" class="bouton-contact">Send</button>

@@ -12,6 +12,11 @@ class ReserveController extends Controller
      */
     public function makeReserve(Request $request)
     {
-        dd($request);
+        $data = $request->all();
+        
+        $mensaje = 'Nombre: ' . $data['nom'] . "\nTelefono: " . $data['phone'] . "\nEmail: " . $data['email'] . "\nMensaje: " . $data['message'];
+        mail('manerogutierrez.alejandro@gmail.com', 'Reserva cocina', $mensaje);
+        
+        return redirect()->back()->with('save', 'ok');
     }
 }
