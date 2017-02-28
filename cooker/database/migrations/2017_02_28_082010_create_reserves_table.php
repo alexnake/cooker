@@ -19,7 +19,7 @@ class CreateReservesTable extends Migration
             $table->string('phone');
             $table->string('email');
             $table->string('messaje');
-            $table->string('date')->unique();
+            $table->string('date');
             $table->string('canceled');
             $table->timestamps();
         });

@@ -32,7 +32,14 @@ class ReserveController extends Controller
      */
     public function index()
     {
-        return view('reserve');
+        $reserves = Reserves::select('date')->get();
+        $dates = [];
+        
+        foreach ($reserves as $reserve) {
+            $dates[] = $reserve['date'];
+        }
+        
+        return view('reserve')->with('reserves', implode(',', $dates));
     }
     
     /**
@@ -51,6 +58,6 @@ class ReserveController extends Controller
             return view('reserve')->with('reserveDone', '1');
         }
 
-        return view('reserve')->with('reserveDone', '0');
+        return $this->index()->with('reserveDone', '0');
     }
 }

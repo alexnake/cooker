@@ -80,7 +80,9 @@
                 firstDay: 1,
                 format: 'DD/MM/YYYY',
                 disableDayFn: function(theDate) {
-                    return (theDate.getDay() != 6 && theDate.getDay() != 0 && theDate.getDay() != 5)
+                    var reserves = {{ $reserves }};
+                    return (theDate.getDay() != 6 && theDate.getDay() != 0 && theDate.getDay() != 5 && reserves.indexOf(theDate.toISOString().slice(0,10)));
+                    }
                 }
             });
             
