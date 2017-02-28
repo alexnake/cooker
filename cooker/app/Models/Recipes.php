@@ -63,8 +63,9 @@ class Recipes extends Model
     ];
     
     /**
-     * @param
-     * @return
+     * Get last ten recipes from DDBB
+     *
+     * @return Illuminate\Database\Eloquent\Collection
      */
     public function getLastTen()
     {
@@ -72,8 +73,9 @@ class Recipes extends Model
     }
     
     /**
-     * @param
-     * @return
+     * Get clasic recipes order by date from DDBB
+     *
+     * @return Illuminate\Database\Eloquent\Collection
      */
     public function getClasicsOrderByDateDesc()
     {

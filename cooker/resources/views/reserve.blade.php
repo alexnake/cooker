@@ -9,6 +9,7 @@
         
         <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
         <link rel="stylesheet" href="{{ URL::asset('css/font-awesome/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('css/sweetalert.css') }}">
     @stop
     
     @section('content')
@@ -72,6 +73,7 @@
         <script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('js/moment.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('js/pikaday.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/sweetalert.min.js') }}"></script>
         <script>
             var picker = new Pikaday({
                 field: document.getElementById('datepicker'),
@@ -81,5 +83,14 @@
                     return (theDate.getDay() != 6 && theDate.getDay() != 0 && theDate.getDay() != 5)
                 }
             });
+            
+            if({{isset($reserveDone) && $reserveDone == '1'}}){
+                swal({
+                  title: "Reserva realizada",
+                  text: "La reserva se ha realizado correctamente.",
+                  type: "success",
+                  confirmButtonText: "Aceptar"
+                });
+            }
         </script>
     @stop  

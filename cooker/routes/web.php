@@ -36,9 +36,10 @@ Route::get('/menu', [
 | Reserve route
 |--------------------------------------------------------------------------
  */
-Route::get('/reserve', function () {
-    return view('reserve');
-});
+Route::get('/reserve', [
+    'uses' => 'ReserveController@index',
+    'as' => 'reserve.reserve'
+]);
 
 /*
 |--------------------------------------------------------------------------
