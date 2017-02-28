@@ -79,3 +79,13 @@ Route::get('/getRecipes', [
     'uses' => 'RecipesController@getAllOrderByDateDesc',
     'as' => 'recipes.getAllOrderByDateDesc'
 ]);
+
+/*
+|--------------------------------------------------------------------------
+| About route
+|--------------------------------------------------------------------------
+ */
+Route::get('/about', [
+    'uses' => 'AboutController@index',
+    'as' => 'about.index'
+]);

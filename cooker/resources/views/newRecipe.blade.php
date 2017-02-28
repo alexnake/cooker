@@ -37,6 +37,12 @@
                     <div>
                         <textarea id="element_4" name="description" class="element textarea medium"></textarea> 
                     </div> 
+                </li>       
+                <li id="li_6" >
+                    <label class="description" for="element_6">Precio </label>
+                    <div>
+                        <input id="element_6" name="price" class="element text medium" type="text" maxlength="255" value=""></input> 
+                    </div> 
                 </li>
             
                 <li class="buttons">

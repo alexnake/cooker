@@ -38,7 +38,7 @@ class Recipes extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'photo', 'summary', 'description', 'tags'
+        'title', 'photo', 'summary', 'description', 'tags', 'price'
     ];
 
     /**
@@ -59,7 +59,8 @@ class Recipes extends Model
         'photo' => '',
         'summary' => '',
         'description' => '',
-        'tags' => 'NEW'
+        'tags' => 'NEW',
+        'price' => '0'
     ];
     
     /**
