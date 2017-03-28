@@ -54,15 +54,18 @@ class ReserveController extends Controller
         
         $mensaje = 'Nombre: ' . $data['name'] . "\nTelefono: " . $data['phone'] . "\nEmail: " . $data['email'] . "\nMensaje: " . $data['message'];
         //mail('manerogutierrez.alejandro@gmail.com', 'Reserva cocina', $mensaje);
+
+        $newReserve = null;
         
-        if ($this->reserves->getByDate($request->get('date'))) {
+        if (is_null($this->reserves->getByDate($request->get('date'))->first())) {
             $newReserve = Reserves::create($request->all());
         }
 
-        if ($newReserve) {
-            return redirect()->back()->with('reserveDone', '1');
+        if (!is_null($newReserve)) {
+            return redirect()->back()->with('reserveDone', 'ok');
+            ;
         }
 
-        return redirect()->back()->with('reserveDone', '0');//$this->index()->with('reserveDone', '0');
+        return redirect()->back()->with('reserveNotDone', 'error');//$this->index()->with('reserveDone', '0');
     }
 }

@@ -83,14 +83,20 @@
                 }
             });
             
-            var reserveDone = "{{isset($reserveDone) && $reserveDone == '1'}}";
-            if(reserveDone == "true"){
+            @if(session()->has('reserveDone'))
                 swal({
                   title: "Reserva realizada",
                   text: "La reserva se ha realizado correctamente.",
                   type: "success",
                   confirmButtonText: "Aceptar"
                 });
-            }
+            @elseif(session()->has('reserveNotDone'))
+                swal({
+                  title: "Reserva no realizada",
+                  text: "Sentimos comunicarte que la reserva no se ha podido realizar correctamente.",
+                  type: "error",
+                  confirmButtonText: "Aceptar"
+                });
+            @endif
         </script>
     @stop  
