@@ -73,13 +73,26 @@
         <script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('js/sweetalert.min.js') }}"></script>
         <script>
+        
+        function convertDate(inputFormat) {
+            function pad(s) { return (s < 10) ? '0' + s : s; }
+            var d = new Date(inputFormat);
+            return [d.getFullYear(), pad(d.getMonth()+1), pad(d.getDate())].join('-');
+        }
+
             var picker = new Pikaday({
                 field: document.getElementById('datepicker'),
                 firstDay: 1,
                 format: 'DD/MM/YYYY',
                 disableDayFn: function(theDate) {
+                    
                     var reserves = "{{ isset($reserves) ? $reserves : [] }}";
-                    return (theDate.getDay() != 6 && theDate.getDay() != 0 && theDate.getDay() != 5 && reserves.indexOf(theDate.toISOString().slice(0,10)));
+                    var date = convertDate(theDate);
+                    
+                    return theDate.getDay() != 6 
+                        && theDate.getDay() != 0 
+                        && theDate.getDay() != 5 
+                        || reserves.indexOf(date) != -1;
                 }
             });
             

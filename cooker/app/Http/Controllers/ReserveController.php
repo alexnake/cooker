@@ -36,7 +36,8 @@ class ReserveController extends Controller
         $dates = [];
         
         foreach ($reserves as $reserve) {
-            $dates[] = $reserve['date'];
+            $date = \DateTime::createFromFormat('d/m/Y', $reserve['date']);
+            $dates[] = $date->format('Y-m-d');
         }
         
         return view('reserve')->with('reserves', implode(',', $dates));
@@ -53,7 +54,8 @@ class ReserveController extends Controller
         $data = $request->all();
         
         $mensaje = 'Nombre: ' . $data['name'] . "\nTelefono: " . $data['phone'] . "\nEmail: " . $data['email'] . "\nMensaje: " . $data['message'];
-        //mail('manerogutierrez.alejandro@gmail.com', 'Reserva cocina', $mensaje);
+        
+        mail('alexnake1@gmail.com', 'Reserva cocina', $mensaje);
 
         $newReserve = null;
         
@@ -63,9 +65,8 @@ class ReserveController extends Controller
 
         if (!is_null($newReserve)) {
             return redirect()->back()->with('reserveDone', 'ok');
-            ;
         }
 
-        return redirect()->back()->with('reserveNotDone', 'error');//$this->index()->with('reserveDone', '0');
+        return redirect()->back()->with('reserveNotDone', 'error');
     }
 }
