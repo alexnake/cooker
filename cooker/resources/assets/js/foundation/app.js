@@ -40,10 +40,10 @@ jQuery(document).ready(function ($) {
 
   /* PLACEHOLDER FOR FORMS ------------- */
   /* Remove this and jquery.placeholder.min.js if you don't need :) */
-  $('input, textarea').placeholder();
+  //$('input, textarea').placeholder();
 
   /* TOOLTIPS ------------ */
-  $(this).tooltips();
+  //$(this).tooltips();
 
   /* UNCOMMENT THE LINE YOU WANT BELOW IF YOU WANT IE6/7/8 SUPPORT AND ARE USING .block-grids */
   //  $('.block-grid.two-up>li:nth-child(2n+1)').css({clear: 'left'});
@@ -120,6 +120,6 @@ jQuery(document).ready(function ($) {
   $('.button.dropdown.up.tiny > ul').css('top', 'auto').css('bottom', tinyButtonHeight - 2);
 
   /* CUSTOM FORMS */
-  $.foundation.customForms.appendCustomMarkup();
+  //$.foundation.customForms.appendCustomMarkup();
 
 });

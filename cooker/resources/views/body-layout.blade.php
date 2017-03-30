@@ -10,11 +10,21 @@
                     <div id='menu-nav'>
                       <div id='navigation-bar'>
                         <ul>
-                          <li class='menu-sub-nav current-item'><a href='{{ route('index.index') }}'><i></i><span>Home</span></a></li>
-                          <li class='menu-sub-nav'><a href='{{ route('menu.index') }}'><i></i><span>Carta</span></a></li>
-                          <li class='menu-sub-nav'><a href='{{ route('about.index') }}'><i></i><span>About</span></a></li>
-                          <li class='menu-sub-nav'><a href='{{ url('reserve') }}'><i></i><span>Reservar</span></a></li>
-                          <li class='menu-sub-nav' id='searchbox'><a href='#'><i></i><span>Costes</span></a></li>
+                            <li class='menu-sub-nav current-item'>
+                                <a href='{{ route('index.index') }}'><i></i><span>Home</span></a>
+                            </li>
+                            <li class='menu-sub-nav'>
+                                <a href='{{ route('menu.index') }}'><i></i><span>Carta</span></a>
+                            </li>
+                            <li class='menu-sub-nav' id='searchbox'>
+                                <a href='#'><i></i><span>Cursos</span></a>
+                            </li>
+                            <li class='menu-sub-nav'>
+                                <a href='{{ url('reserve') }}'><i></i><span>Reservar</span></a>
+                            </li>
+                            <li class='menu-sub-nav'>
+                                <a href='{{ route('about.index') }}'><i></i><span>About</span></a>
+                            </li>
                         </ul>
                       </div>
                       <div id='search-bar'>

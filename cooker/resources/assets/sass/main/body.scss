@@ -70,9 +70,13 @@ body {
     border-radius: 4pt;
     padding: 1em;
     margin: 1em 0em 1em 1.4em;
-    height: 26em;
+    min-height: 26em;
 }
 
 .aboutImage {
-    padding-top: 0.6em !important;
+    padding-top: 1.5em !important;
+}
+
+.marginTop2{
+    margin-top: 2em;
 }

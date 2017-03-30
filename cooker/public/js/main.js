@@ -5548,10 +5548,10 @@ jQuery(document).ready(function ($) {
 
   /* PLACEHOLDER FOR FORMS ------------- */
   /* Remove this and jquery.placeholder.min.js if you don't need :) */
-  $('input, textarea').placeholder();
+  //$('input, textarea').placeholder();
 
   /* TOOLTIPS ------------ */
-  $(this).tooltips();
+  //$(this).tooltips();
 
   /* UNCOMMENT THE LINE YOU WANT BELOW IF YOU WANT IE6/7/8 SUPPORT AND ARE USING .block-grids */
   //  $('.block-grid.two-up>li:nth-child(2n+1)').css({clear: 'left'});
@@ -5628,7 +5628,7 @@ jQuery(document).ready(function ($) {
   $('.button.dropdown.up.tiny > ul').css('top', 'auto').css('bottom', tinyButtonHeight - 2);
 
   /* CUSTOM FORMS */
-  $.foundation.customForms.appendCustomMarkup();
+  //$.foundation.customForms.appendCustomMarkup();
 
 });
 /*
@@ -5799,25 +5799,25 @@ jQuery(document).ready(function ($) {
     }
   }
   
-  $('form.custom span.custom.checkbox').live('click', function (event) {
+  $('form.custom span.custom.checkbox').on('click', function (event) {
     event.preventDefault();
     event.stopPropagation();
     
     toggleCheckbox($(this));
   });
   
-  $('form.custom span.custom.radio').live('click', function (event) {
+  $('form.custom span.custom.radio').on('click', function (event) {
     event.preventDefault();
     event.stopPropagation();
     
     toggleRadio($(this));
   });
   
-  $('form.custom select').live('change', function (event) {
+  $('form.custom select').on('change', function (event) {
     refreshCustomSelect($(this));
   });
   
-  $('form.custom label').live('click', function (event) {
+  $('form.custom label').on('click', function (event) {
     var $associatedElement = $('#' + $(this).attr('for')),
         $customCheckbox,
         $customRadio;
@@ -5834,7 +5834,7 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  $('form.custom div.custom.dropdown a.current, form.custom div.custom.dropdown a.selector').live('click', function (event) {
+  $('form.custom div.custom.dropdown a.current, form.custom div.custom.dropdown a.selector').on('click', function (event) {
     var $this = $(this),
         $dropdown = $this.closest('div.custom.dropdown'),
         $select = $dropdown.prev();
@@ -5857,7 +5857,7 @@ jQuery(document).ready(function ($) {
     }
   });
   
-  $('form.custom div.custom.dropdown li').live('click', function (event) {
+  $('form.custom div.custom.dropdown li').on('click', function (event) {
     var $this = $(this),
         $customDropdown = $this.closest('div.custom.dropdown'),
         $select = $customDropdown.prev(),
