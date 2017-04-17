@@ -16,7 +16,7 @@
                             <li class='menu-sub-nav'>
                                 <a href='{{ route('menu.index') }}'><i></i><span>Carta</span></a>
                             </li>
-                            <li class='menu-sub-nav' id='searchbox'>
+                            <li class='menu-sub-nav'>
                                 <a href='#'><i></i><span>Cursos</span></a>
                             </li>
                             <li class='menu-sub-nav'>
