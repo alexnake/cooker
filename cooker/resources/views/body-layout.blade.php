@@ -17,20 +17,12 @@
                                 <a href='{{ route('menu.index') }}'><i></i><span>Carta</span></a>
                             </li>
                             <li class='menu-sub-nav'>
-                                <a href='#'><i></i><span>Cursos</span></a>
-                            </li>
-                            <li class='menu-sub-nav'>
                                 <a href='{{ url('reserve') }}'><i></i><span>Reservar</span></a>
                             </li>
                             <li class='menu-sub-nav'>
                                 <a href='{{ route('about.index') }}'><i></i><span>About</span></a>
                             </li>
                         </ul>
-                      </div>
-                      <div id='search-bar'>
-                        <!--<form action='nothing'>-->
-                          <input type='text' name='search' id='searchfld' placeholder='Enter your query and hit enter'/>
-                        <!--</form>-->
                       </div>
                     </div>
                 </div>
