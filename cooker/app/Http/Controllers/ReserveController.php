@@ -1,5 +1,10 @@
 <?php
 
+/*
+    @Author -> Alejandro Manero
+    Controller from Reserves Page.
+ */
+
 namespace App\Http\Controllers;
 
 use App\Models\Reserves;
@@ -49,7 +54,7 @@ class ReserveController extends Controller
      * @param Illuminate\Http\Request $request
      * @return Illuminate\Contracts\View\View
      */
-    public function makeReserve(Request $request)
+    public function make(Request $request)
     {
         $data = $request->all();
         

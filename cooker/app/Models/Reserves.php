@@ -1,5 +1,10 @@
 <?php
 
+/*
+    Author -> Alejandro Manero
+    Reserves Model
+ */
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;

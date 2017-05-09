@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Cook</title>
+        <title>Hoy cocina manero. La carta.</title>
         
         <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
     @stop
@@ -25,7 +25,7 @@
                 <div class="menu-recepie">
                     <div class="row">
                         <div class="five columns leftText">
-                            <img class="recepieImage" src="{{ $recipe->photo }}">
+                            <img class="recepieImage" src="{{ $recipe->photo }}" alt="{{ $recipe->title }}" title="{{ $recipe->title }}">
                         </div>
                         <div class="seven columns leftText">
                             <h4>{{ $recipe->title }}</h4><p>{{ $recipe->summary }}</p>   

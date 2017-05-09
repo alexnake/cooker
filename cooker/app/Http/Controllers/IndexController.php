@@ -1,5 +1,10 @@
 <?php
 
+/*
+    @Author -> Alejandro Manero
+    Controller from Index Page.
+ */
+
 namespace App\Http\Controllers;
 
 use App\Models\Recipes;

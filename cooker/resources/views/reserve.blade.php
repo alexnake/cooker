@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Cook</title>
+        <title>Hoy cocina manero. Reservar.</title>
         
         <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
         <link rel="stylesheet" href="{{ URL::asset('css/font-awesome/css/font-awesome.min.css') }}">

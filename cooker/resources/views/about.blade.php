@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Cook</title>
+        <title>Hoy cocina manero. Algo sobre mi</title>
         
         <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
     @stop
@@ -17,7 +17,7 @@
             <div class="main-image">
                 <div class="row">
                     <div class="twelve columns">
-                        <img class="aboutMainImage" src="http://lorempixel.com/1024/480/food">
+                        <img class="aboutMainImage" src="http://lorempixel.com/1024/480/food" alt="Manero image" title="Manero imagen">
                     </div>
                 </div>
             </div>
@@ -33,8 +33,8 @@
                     </div>
                 </div>
                 <div class="four columns aboutImage">
-                    <img class="" src="http://lorempixel.com/320/190/food">
-                    <img class="" src="http://lorempixel.com/320/190/food">
+                    <img class="" src="http://lorempixel.com/320/190/food" alt="Manero imagen" title="Manero image">
+                    <img class="" src="http://lorempixel.com/320/190/food" alt="Manero imagen" title="Manero image">
                 </div>
             </div>
             
@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 <div class="eight columns aboutImage">
-                    <img class="" src="http://lorempixel.com/620/360/food">
+                    <img class="" src="http://lorempixel.com/620/360/food" alt="Manero imagen" title="Manero imagen">
                 </div>
             </div>
             
@@ -57,8 +57,8 @@
                         <p>Si deseas realizar una reserva para realizar un curso o un evento, puedes contactar mediante la página <a href="{{ url('reserve') }}">reservas</a>, donde podrás agregar una descripción de lo que tienes en mente, y me pondré en contacto contigo lo más pronto posible para concretar los detalles.</p>
                         <p>Para solicitar información, puedes llamarme al telefono 628 81 65 03, o bien mandarme un <a href="mailto:alexnake1@gmail.com">email</a> a alexnake1@gmail.com</p>
                         <p>
-                            <a target="_blank" title="Sigueme en Facebook" href="http://www.facebook.com/"><img alt="Sigueme en facebook" src="//login.create.net/images/icons/user/facebook_40x40.png" border=0></a>
-                            <a target="_blank" title="Sigueme en Instagram" href="http://www.instagram.com/"><img alt="Sigueme en Instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram40x40.png" border=0></a>
+                            <a target="_blank" title="Sígueme en Facebook" href="http://www.facebook.com/"><img alt="Sígueme en facebook" src="//login.create.net/images/icons/user/facebook_40x40.png" border=0></a>
+                            <a target="_blank" title="Sígueme en Instagram" href="http://www.instagram.com/"><img alt="Sígueme en Instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram40x40.png" border=0></a>
                         </p>
                     </div>
                 </div>

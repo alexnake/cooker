@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Cook</title>
+        <title>Hoy cocina manero. Página principal.</title>
         
         <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
     @stop
@@ -15,7 +15,7 @@
         <div class="twelve columns">
             <div class="row">
                 <div class="eight columns divMainImage">
-                    <img class="mainImage" src="{{ $indexRecipes[0]->photo }}">
+                    <img class="mainImage" src="{{ $indexRecipes[0]->photo }}" alt="{{ $indexRecipes[0]->title }}" title="{{ $indexRecipes[0]->title }}">
                     <h3>{{ $indexRecipes[0]->title }}</h3>
                     <p>
                         {{ $indexRecipes[0]->summary }}
@@ -33,7 +33,7 @@
                     
                             <div class="recepie-sidebar">
                                 <div class="seven columns">
-                                    <img class="" src="{{ $indexRecipes[$i]->photo }}">
+                                    <img class="" src="{{ $indexRecipes[$i]->photo }}" alt="{{ $indexRecipes[$i]->tittle }}" title="{{ $indexRecipes[$i]->tittle }}">
                                 </div>
                                 <div class="five columns lineBreak">
                                     <h4>{{ $indexRecipes[$i]->tittle }}</h4><p>{{ $indexRecipes[$i]->summary }}</p>   

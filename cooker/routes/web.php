@@ -46,8 +46,8 @@ Route::get('/reserve', [
 | Make reserve route
 |--------------------------------------------------------------------------
  */
-Route::post('/makeReserve', [
-    'uses' => 'ReserveController@makeReserve',
+Route::post('/make', [
+    'uses' => 'ReserveController@make',
     'as' => 'reserve.make_reserve'
 ]);
 
