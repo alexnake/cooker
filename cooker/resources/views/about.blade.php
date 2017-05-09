@@ -42,7 +42,7 @@
                 <div class="four columns">
                     <div class="aboutTextBox marginTop2">
                         <h2>Pero, ¿qué ofrezco?</h2>
-                        <p>En esta página podrás encontrar una <a href="{{ route('menu.index') }}">carta</a>, donde se detallan los platos que puedo preparar para cualquier evento que quieras organizar. Además, podras encontrar, en el apartado de <a href="#">cursos</a>, distintos menus para preparar con las personas que quieras, enseñando paso a paso todo el proceso de <strong>creación</strong>.</p>
+                        <p>En esta página podrás encontrar una <a href="{{ route('menu.index') }}">carta</a>, donde se detallan los platos que puedo preparar para cualquier evento que quieras organizar.</p>
                     </div>
                 </div>
                 <div class="eight columns aboutImage">
@@ -54,8 +54,8 @@
                 <div class="twelve columns">
                     <div class="aboutTextBox">
                         <h2>Contacto</h2>
-                        <p>Si deseas realizar una reserva para realizar un curso o un evento, puedes contactar mediante la página <a href="{{ url('reserve') }}">reservas</a>, donde podrás agregar una descripción de lo que tienes en mente, y me pondré en contacto contigo lo más pronto posible para concretar los detalles.</p>
-                        <p>Para solicitar información, puedes llamarme al telefono 628 81 65 03, o bien mandarme un <a href="mailto:alexnake1@gmail.com">email</a> a alexnake1@gmail.com</p>
+                        <p>Si deseas realizar una reserva para realizar un evento, puedes contactar mediante la página <a href="{{ url('reserve') }}">reservas</a>, donde podrás agregar una descripción de lo que tienes en mente, y me pondré en contacto contigo lo más pronto posible para concretar los detalles.</p>
+                        <p>Para solicitar información, puedes llamarme al telefono 628 81 65 03, o bien mandarme un <a href="mailto:hoycocinamanero@gmail.com">email</a> a hoycocinamanero@gmail.com</p>
                         <p>
                             <a target="_blank" title="Sígueme en Facebook" href="http://www.facebook.com/"><img alt="Sígueme en facebook" src="//login.create.net/images/icons/user/facebook_40x40.png" border=0></a>
                             <a target="_blank" title="Sígueme en Instagram" href="https://www.instagram.com/hoycocinamanero"><img alt="Sígueme en Instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram40x40.png" border=0></a>
