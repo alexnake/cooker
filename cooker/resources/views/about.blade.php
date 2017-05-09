@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Hoy cocina manero. Algo sobre mi</title>
+        <title>Hoy cocina manero - Algo sobre mi</title>
         
         <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
     @stop

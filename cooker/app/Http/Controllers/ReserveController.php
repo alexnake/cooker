@@ -60,7 +60,7 @@ class ReserveController extends Controller
         
         $mensaje = 'Nombre: ' . $data['name'] . "\nTelefono: " . $data['phone'] . "\nEmail: " . $data['email'] . "\nMensaje: " . $data['message'];
         
-        mail('alexnake1@gmail.com', 'Reserva cocina', $mensaje);
+        mail('hoycocinamanero@gmail.com', 'Reserva cocina', $mensaje);
 
         $newReserve = null;
         
