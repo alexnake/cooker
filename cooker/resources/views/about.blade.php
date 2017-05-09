@@ -58,7 +58,7 @@
                         <p>Para solicitar información, puedes llamarme al telefono 628 81 65 03, o bien mandarme un <a href="mailto:alexnake1@gmail.com">email</a> a alexnake1@gmail.com</p>
                         <p>
                             <a target="_blank" title="Sígueme en Facebook" href="http://www.facebook.com/"><img alt="Sígueme en facebook" src="//login.create.net/images/icons/user/facebook_40x40.png" border=0></a>
-                            <a target="_blank" title="Sígueme en Instagram" href="http://www.instagram.com/"><img alt="Sígueme en Instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram40x40.png" border=0></a>
+                            <a target="_blank" title="Sígueme en Instagram" href="https://www.instagram.com/hoycocinamanero"><img alt="Sígueme en Instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram40x40.png" border=0></a>
                         </p>
                     </div>
                 </div>
