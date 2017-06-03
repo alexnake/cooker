@@ -57,7 +57,7 @@
                         <p>Si deseas realizar una reserva para realizar un evento, puedes contactar mediante la página <a href="{{ url('reserve') }}">reservas</a>, donde podrás agregar una descripción de lo que tienes en mente, y me pondré en contacto contigo lo más pronto posible para concretar los detalles.</p>
                         <p>Para solicitar información, puedes llamarme al telefono 628 81 65 03, o bien mandarme un <a href="mailto:hoycocinamanero@gmail.com">email</a> a hoycocinamanero@gmail.com</p>
                         <p>
-                            <a target="_blank" title="Sígueme en Facebook" href="http://www.facebook.com/"><img alt="Sígueme en facebook" src="//login.create.net/images/icons/user/facebook_40x40.png" border=0></a>
+                            <a target="_blank" title="Sígueme en Facebook" href="https://www.facebook.com/HoycocinaManero/?ref=aymt_homepage_panel"><img alt="Sígueme en facebook" src="//login.create.net/images/icons/user/facebook_40x40.png" border=0></a>
                             <a target="_blank" title="Sígueme en Instagram" href="https://www.instagram.com/hoycocinamanero"><img alt="Sígueme en Instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram40x40.png" border=0></a>
                         </p>
                     </div>

@@ -35,9 +35,13 @@ class MenuController extends Controller
     public function index()
     {
         $clasicsRecipes = $this->recipes->getClasicsOrderByDateDesc();
+        
+        $desertsRecipes = $this->recipes->getDesertsOrderByDateDesc();
 
         if (count($clasicsRecipes) > 0) {
-            return view('menu')->with('clasicsRecipes', $clasicsRecipes);
+            return view('menu')
+                ->with('clasicsRecipes', $clasicsRecipes)
+                ->with('desertsRecipes', $desertsRecipes);
         }
         
         abort(403, 'No recipes in DDBB.');

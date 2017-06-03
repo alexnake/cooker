@@ -87,4 +87,14 @@ class Recipes extends Model
     {
         return $this->where('tags', '=', 'clasico')->orderBy('created_at', 'desc')->get();
     }
+    
+    /**
+     * Get clasic recipes order by date from DDBB
+     *
+     * @return Illuminate\Database\Eloquent\Collection
+     */
+    public function getDesertsOrderByDateDesc()
+    {
+        return $this->where('tags', '=', 'postre')->orderBy('created_at', 'desc')->get();
+    }
 }

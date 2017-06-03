@@ -35,6 +35,31 @@
             @endforeach
         </div>
     </div>
+    
+    <div class="row">
+        <div class="twelve columns">
+        
+            <div class="menu-desc">
+                <div class="row">
+                    <div class="twelve columns">
+                        <h3>POSTRES</h3>
+                    </div>
+                </div>
+            </div>
+            @foreach ($desertsRecipes as $recipe)
+                <div class="menu-recepie">
+                    <div class="row">
+                        <div class="five columns leftText">
+                            <img class="recepieImage" src="{{ $recipe->photo }}">
+                        </div>
+                        <div class="seven columns leftText">
+                            <h4>{{ $recipe->title }}</h4><p>{{ $recipe->summary }}</p>   
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
     @stop
     
     @section('footer')
